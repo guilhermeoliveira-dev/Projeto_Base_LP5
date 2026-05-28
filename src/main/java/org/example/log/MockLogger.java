@@ -27,6 +27,10 @@ public class MockLogger extends PrintLogger {
         return logs.stream().anyMatch(log -> log.contains(text));
     }
 
+    public int getLogCount() {
+        return logs.size();
+    }
+
     public void clearLogs() {
         logs.clear();
     }
